@@ -1,6 +1,6 @@
 # Field Knots — Vol. I: A Working Repertoire
 
-Ten knots sorted by job: stoppers, loops, hitches, bends, bindings. A knot is chosen by its job, not its name. Written steps consolidate a knot rather than teach it cold — watch each once (Animated Knots by Grog), then drill from this page.
+Ten knots sorted by job: stoppers, loops, hitches, bends, bindings. A knot is chosen by its job, not its name. Written steps consolidate a knot rather than teach it cold — watch each once ([Animated Knots by Grog](https://www.animatedknots.com/)), then drill from this page.
 
 ## Rope words
 
@@ -25,7 +25,7 @@ Bulkier stopper, unties easily after load.
 
 ## Loops — a fixed eye that won't slip
 
-### Bowline *(core)*
+### [Bowline](https://www.animatedknots.com/?s=bowline) *(core)*
 Fixed loop at the end of a line: strong, non-slipping, unties easily.
 1. Small loop in the standing part (the "hole"); standing part runs away as the "tree". 2. Rabbit up out of the hole, 3. round the back of the tree, 4. back down the hole. 5. Set against the standing part.
 **Mnemonic:** rabbit out of the hole, round the tree, back down the hole.
@@ -38,7 +38,7 @@ Fixed loop mid-rope or at the end; easy to inspect at a glance.
 
 ## Hitches — fix a rope to a post, ring or rail
 
-### Clove hitch *(core)*
+### [Clove hitch](https://www.animatedknots.com/?s=clove+hitch) *(core)*
 Fast, adjustable attachment; the start of most lashings.
 1. Over and around the post. 2. Cross the first wrap, around again slightly higher. 3. Tuck the working end under the second wrap, alongside the first — the crossings form an X. 4. Pull both ends.
 **Check:** an X on the post means a clove.
