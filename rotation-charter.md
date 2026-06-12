@@ -32,7 +32,7 @@ The spine of the system. One head pursuit and one hands pursuit per season; ever
 
 ## Parked
 
-Old English · runes & ogham · star lore (candidate for a winter season — dark evening walks) · bushcraft · formal meditation · fiction drafting (notebook only for now)
+Old English · runes & ogham · field signs (clouds & weather lore, wildflowers & their uses, star lore, subtle landscape signs — practice venue is the existing dog walks; star strand suits winter) · bushcraft · formal meditation · fiction drafting (notebook only for now)
 
 Some parked items want acquaintance, not mastery — runes and star lore are weeks-to-months pursuits when their season comes, not multi-year commitments.
 
