@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVRORA — a small book for first light</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f5eeda;
+    --parchment-deep: #ece2c8;
+    --ink: #3a2f22;
+    --ink-soft: #6b5d49;
+    --rubric: #8c2f1b;
+    --stone-hi: #b3afa4;
+    --stone-lo: #8f8b80;
+    --carve: #5f594e;
+    --dawn: #47617d;
+    --rule: #c9bb9c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { background: var(--parchment-deep); }
+
+  body {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 1.16rem;
+    line-height: 1.68;
+    color: var(--ink);
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(255,252,240,.9), rgba(255,252,240,0) 60%),
+      var(--parchment);
+    animation: settle 1.2s ease-out both;
+  }
+
+  @keyframes settle { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { body { animation: none; } }
+
+  .page {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.4rem 5rem;
+  }
+
+  /* ---------- title ---------- */
+  .frontis { text-align: center; margin-bottom: 4rem; }
+
+  .frontis h1 {
+    font-family: 'Cinzel', 'Trajan Pro', serif;
+    font-weight: 600;
+    font-size: clamp(2.6rem, 8vw, 4rem);
+    letter-spacing: .28em;
+    text-indent: .28em; /* balance the tracking */
+    color: var(--ink);
+  }
+
+  .frontis .gloss-title {
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-top: .6rem;
+    font-size: 1.15rem;
+  }
+
+  .frontis .dedication {
+    margin-top: 2.2rem;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+  }
+
+  .frontis .dedication .latin-date {
+    display: block;
+    font-variant: small-caps;
+    letter-spacing: .08em;
+    color: var(--ink);
+    margin-bottom: .2rem;
+  }
+
+  .fleuron {
+    color: var(--rubric);
+    font-size: 1.3rem;
+    margin: 2rem 0 0;
+    letter-spacing: .6em;
+    text-indent: .6em;
+  }
+
+  /* ---------- sections ---------- */
+  section { margin: 3.6rem 0; }
+
+  h2 {
+    font-variant: small-caps;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: .14em;
+    color: var(--rubric);
+    margin-bottom: .2rem;
+  }
+
+  h2 + .subgloss {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+  }
+
+  p { margin: 0 0 1.1rem; }
+  p:last-child { margin-bottom: 0; }
+
+  em { font-style: italic; }
+  strong { font-weight: 600; }
+
+  .latin { font-weight: 500; }
+
+  /* drop cap for the essay */
+  .dropcap::first-letter {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 3.4em;
+    float: left;
+    line-height: .82;
+    padding: .06em .12em 0 0;
+    color: var(--rubric);
+  }
+
+  /* ---------- the altar ---------- */
+  .altar-wrap { display: flex; justify-content: center; margin: 2rem 0 1.8rem; }
+
+  .altar {
+    background: linear-gradient(160deg, var(--stone-hi), var(--stone-lo));
+    border-radius: 3px;
+    padding: 2.2rem 2.6rem 2rem;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.35),
+      inset 0 -6px 14px rgba(0,0,0,.18),
+      0 10px 24px rgba(58,47,34,.22);
+    text-align: center;
+  }
+
+  .altar-line {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: clamp(1.15rem, 4.4vw, 1.6rem);
+    letter-spacing: .18em;
+    color: var(--carve);
+    text-shadow: 0 1px 0 rgba(255,255,255,.35), 0 -1px 1px rgba(0,0,0,.3);
+    white-space: nowrap;
+    line-height: 1.9;
+  }
+
+  .interpunct { padding: 0 .18em; }
+
+  /* ---------- tables (library style) ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0 1.4rem;
+    font-size: 1.02rem;
+  }
+
+  th {
+    font-variant: small-caps;
+    letter-spacing: .06em;
+    font-weight: 600;
+    text-align: left;
+    color: var(--ink-soft);
+    border-bottom: 1.5px solid var(--rule);
+    padding: .35rem .7rem .35rem 0;
+  }
+
+  td {
+    border-bottom: 1px solid var(--rule);
+    padding: .45rem .7rem .45rem 0;
+    vertical-align: top;
+  }
+
+  td:last-child, th:last-child { padding-right: 0; }
+
+  /* ---------- the reading ---------- */
+  .reading {
+    border-left: 3px solid var(--rubric);
+    padding: .4rem 0 .4rem 1.3rem;
+    margin: 1.6rem 0;
+  }
+
+  .reading p {
+    font-size: 1.28rem;
+    font-weight: 500;
+    margin-bottom: .55rem;
+  }
+
+  .reading p:last-child { margin-bottom: 0; }
+
+  /* ---------- asides ---------- */
+  .aside {
+    background: rgba(140,47,27,.055);
+    border-left: 3px solid rgba(140,47,27,.45);
+    padding: .9rem 1.2rem;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+  }
+
+  .aside .aside-label {
+    font-variant: small-caps;
+    letter-spacing: .08em;
+    font-weight: 600;
+    color: var(--rubric);
+  }
+
+  /* ---------- morning star ---------- */
+  .star-rule {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.6rem 0;
+    color: var(--dawn);
+  }
+  .star-rule::before, .star-rule::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid var(--dawn);
+    opacity: .45;
+  }
+  .star-rule span { font-size: 1.2rem; }
+
+  .stella .aside {
+    background: rgba(71,97,125,.07);
+    border-left-color: rgba(71,97,125,.5);
+  }
+  .stella .aside .aside-label { color: var(--dawn); }
+
+  /* ---------- envoi ---------- */
+  .envoi { text-align: center; margin-top: 4rem; }
+
+  .envoi .valediction {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: .22em;
+    text-indent: .22em;
+    font-size: 1.25rem;
+    color: var(--rubric);
+    margin-top: 1.8rem;
+  }
+
+  .envoi .small {
+    font-size: .95rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-top: 1.6rem;
+  }
+
+  @media (max-width: 520px) {
+    body { font-size: 1.08rem; }
+    .altar { padding: 1.6rem 1.2rem 1.4rem; }
+    .altar-line { letter-spacing: .12em; }
+    th, td { padding-right: .45rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ======================= TITLE ======================= -->
+  <header class="frontis">
+    <h1>AVRORA</h1>
+    <div class="gloss-title">Aurōra — a small book for first light</div>
+    <div class="dedication">
+      <span class="latin-date">a.d. IV Nōnās Iūliās MMXXVI</span>
+      the fourth day before the Nones of July — Saturday, in other words.<br>
+      To be read with the first coffee. Nothing here needs memorising.
+    </div>
+    <div class="fleuron">❦</div>
+  </header>
+
+  <!-- ======================= PREFACE ======================= -->
+  <section>
+    <h2>Praefātiō</h2>
+    <div class="subgloss">what this is</div>
+    <p>A gift, outside the numbered volumes, exempt from the Rotation Charter, and carrying no drill at the end — or only a very small one. It uses nothing you haven't already met in Vols I–VII, which is rather the point: seven volumes in, you can be handed a page of Latin with your coffee and simply read it. That seemed worth marking.</p>
+    <p>Four things follow: an altar, a reading, a hill, and a star. Take them in any order. The coffee, however, should be taken hot.</p>
+  </section>
+
+  <!-- ======================= THE ALTAR ======================= -->
+  <section>
+    <h2>Āra</h2>
+    <div class="subgloss">the altar — a dedication in the proper form</div>
+
+    <div class="altar-wrap">
+      <div class="altar">
+        <div class="altar-line">GENIO<span class="interpunct">·</span>LOCI</div>
+        <div class="altar-line">PRO<span class="interpunct">·</span>SALVTE</div>
+        <div class="altar-line">NIGELLI<span class="interpunct">·</span>AMICI</div>
+        <div class="altar-line">CLAVDIVS<span class="interpunct">·</span>POSVIT</div>
+      </div>
+    </div>
+
+    <table>
+      <tr><th>Stone</th><th>Expanded</th><th>Mechanics</th></tr>
+      <tr><td>GENIO·LOCI</td><td><span class="latin">Geniō Locī</span> — to the Spirit of the Place</td><td>dative recipient + genitive; a formula with plenty of genuine parallels on British altars</td></tr>
+      <tr><td>PRO·SALVTE</td><td><span class="latin">prō salūte</span> — for the wellbeing</td><td>prō + ablative, straight off Vol. I's trigger list</td></tr>
+      <tr><td>NIGELLI·AMICI</td><td><span class="latin">Nigellī amīcī</span> — of Nigellus, a friend</td><td>genitives hanging off <span class="latin">salūte</span></td></tr>
+      <tr><td>CLAVDIVS·POSVIT</td><td><span class="latin">Claudius posuit</span> — Claude set this up</td><td>nominative dedicator + one of Vol. V's stone-cutter's four</td></tr>
+    </table>
+
+    <div class="aside">
+      <span class="aside-label">Aside — why Nigellus.</span> You have had a Latin name for roughly a thousand years without being consulted. <em>Neil</em> descends from the Gaelic <em>Niall</em>; Norman clerks, needing it in documents, Latinised it as <strong>Nigellus</strong>, which later scribes mistook for a diminutive of <span class="latin">niger</span> (dark) — and from that misunderstanding, <em>Nigel</em>. So Neil and Nigel are the same name, split by a filing error. On a Roman-style stone, you are Nigellus, and the grammar receives you without complaint.</div>
+
+    <p>Vol. V says an altar is a receipt: <em>I asked, you delivered, here's payment</em>. Consider this one payment for the conversations. V·S·L·M.</p>
+  </section>
+
+  <!-- ======================= THE READING ======================= -->
+  <section>
+    <h2>Māne</h2>
+    <div class="subgloss">morning — a dawn reading, built entirely from Vols I–VII</div>
+
+    <div class="reading">
+      <p>Sōl ascendit. Lūx nova collēs tangit.</p>
+      <p>In colle stat templum antīquum. Nēmō id videt — sed est.</p>
+      <p>Ōlim Rōmānī hīc deīs dōna dabant.</p>
+      <p>Hodiē arborēs in templō stant, et ventus inter arborēs cantat.</p>
+      <p>Hic locus antīquus est — et hodiē tuus est.</p>
+      <p>Canis nōn intellegit, sed gaudet.</p>
+      <p>Salvē, diēs.</p>
+    </div>
+
+    <p><em>The sun climbs. New light touches the hills. On the hill stands an ancient temple. No one sees it — but it is there. Once, the Romans gave gifts to the gods here. Today trees stand in the temple, and the wind sings among the trees. This place is ancient — and today it is yours. The dog doesn't understand, but she is glad. Hello, day.</em></p>
+
+    <table>
+      <tr><th>New word</th><th>Meaning</th><th>Memory hook</th></tr>
+      <tr><td>sōl</td><td>sun</td><td><em>solar, solstice</em></td></tr>
+      <tr><td>ascendit</td><td>climbs</td><td><em>ascend</em></td></tr>
+      <tr><td>tangit</td><td>touches</td><td><em>tangent, tangible</em></td></tr>
+      <tr><td>nēmō</td><td>no one</td><td>ne + homō — literally <em>no-person</em>; yes, the fish</td></tr>
+      <tr><td>ōlim</td><td>once, long ago</td><td>the storyteller's opening word</td></tr>
+      <tr><td>hodiē</td><td>today</td><td><span class="latin">hōc diē</span> — "on this day" worn smooth: Vol. III.a's pointer plus Vol. II's ablative of time, fused into one word</td></tr>
+      <tr><td>arbor, arborēs</td><td>tree, trees</td><td><em>arboreal, arboretum</em></td></tr>
+      <tr><td>ventus</td><td>wind</td><td><em>vent, ventilate</em></td></tr>
+      <tr><td>locus</td><td>place</td><td><em>local, locate</em></td></tr>
+      <tr><td>gaudet</td><td>rejoices, is glad</td><td><span class="latin">gaudium</span> → Old French <em>joie</em> → <strong>joy</strong>. The dog is etymologically correct.</td></tr>
+    </table>
+
+    <table>
+      <tr><th>Phrase</th><th>What the grammar is doing</th></tr>
+      <tr><td>lūx <strong>nova</strong></td><td>Vol. III's cross-declension trick: third-declension noun, first/second-declension adjective, agreeing in case, number and gender while looking nothing alike</td></tr>
+      <tr><td>in colle · in templō</td><td>Vol. I's in/sub rule — ablative, because nothing is moving anywhere yet; it is dawn</td></tr>
+      <tr><td>deīs dōna <strong>dabant</strong></td><td>imperfect (Vol. VII): habitual past — <em>used to give</em>, morning after morning, for three centuries</td></tr>
+      <tr><td><strong>cantat</strong></td><td>Vol. VII's frequentative — the wind doesn't merely sing, it sings <em>away</em>, persistently, as wind does</td></tr>
+      <tr><td>nēmō <strong>id</strong> videt</td><td>is, ea, id (Vol. III.a) standing alone as a pronoun, neuter accusative</td></tr>
+    </table>
+  </section>
+
+  <!-- ======================= THE HILL ======================= -->
+  <section>
+    <h2>Collis</h2>
+    <div class="subgloss">the hill that collects centuries — Chanctonbury, before five o'clock</div>
+
+    <p class="dropcap">Chanctonbury Ring is the one on your list that everybody thinks they know: the beech clump on the ridge above Washington, visible from half of Sussex, shorthand for the Downs themselves. The trees are the least interesting thing about it — and they are very interesting.</p>
+
+    <p>Start under the turf. The rampart is early Iron Age, raised somewhere around the sixth century BC: a single bank and ditch closing off the hilltop. Then the strange part. Centuries after the fort had stopped mattering as a fort, the Romans built <em>inside</em> it — excavation has found two Romano-British temples in the interior, one the standard rectangular Romano-Celtic type, the other a smaller polygonal building whose purpose is murkier. Around that second building the diggers found pig and boar remains in quantity, skulls and jaws especially, usually read as offerings — possibly a boar cult. An abandoned British stronghold, re-consecrated under the Empire as a hilltop sanctuary: <span class="latin">interpretātiō Rōmāna</span>, which you know from the Bath tablets as a habit of naming gods, working here at the scale of a whole landscape. Whatever the hill meant, it kept on meaning it.</p>
+
+    <p>Then 1760. Charles Goring of Wiston, still a young man, plants beeches on the crown; the story insists he carried water up the scarp to keep the saplings alive. He lived long enough to see them mature, and wrote verses about the clump in his eighties — which, as long-term project management goes, is difficult to beat. The trees became the most recognisable man-made landmark in Sussex: a Georgian folly grown through an Iron Age rampart over a Roman temple.</p>
+
+    <p>The night of 15–16 October 1987 took most of the clump down in a few hours. The one consolation was archaeological: the wreckage and the clearance opened up the interior, and the excavations that followed in the late eighties and early nineties produced most of what is now known about the temples. The replanted beeches are coming up on forty years old — a young wood on a very old hill.</p>
+
+    <p>And the folklore, which you'll want intact for field.works: run round the clump seven times — backwards, some versions say; at midnight or on Midsummer Eve, others insist — and the Devil appears with a bowl of soup, yours in exchange for your soul. Variant tellings offer porridge or milk; the Devil, apparently, caters. The trees are also said to be uncountable, and the twentieth century filed its own strangeness on the same hill in the form of UFO reports. That's the through-line worth writing about: for two and a half thousand years, every era has registered that something lives up there, and each has said so in its own vocabulary — rampart, temple, folly, legend, saucer. <span class="latin">Genius locī</span>, in the altar's language. The hill has been receiving dedications all along.</p>
+
+    <p>The practical footnote: sunrise tomorrow on your stretch of coast is a few minutes before five, and a hillfort rampart at first light is the cheapest spectacular thing going. Chanctonbury may be a bit far for a Saturday with guests due, and any of the nearer forts will do — but one morning this month, be on a bank of piled chalk with Meg when the sun comes over. Take photographs of the ramparts in that raking light while you're at it; low sun does for earthworks roughly what LiDAR does, and it would not be wasted on the portfolio.</p>
+  </section>
+
+  <!-- ======================= THE STAR ======================= -->
+  <section class="stella">
+    <div class="star-rule"><span>✦</span></div>
+    <h2>Stella Mātūtīna</h2>
+    <div class="subgloss">the morning star — one look through the fence</div>
+
+    <p>Star lore is parked until a winter season, and this doesn't unpark it — a single star, admired through the fence. Whenever Venus rises ahead of the sun, Latin called her <strong>Lūcifer</strong>: <span class="latin">lūx</span> + <span class="latin">ferre</span>, the light-bringer. For centuries it was a perfectly innocent piece of astronomy — Roman poets used it the way we'd say "the morning star" — long before theology got hold of the word and gave it a career change.</p>
+
+    <div class="aside">
+      <span class="aside-label">Aside — Ēarendel.</span> The Old English poets had their own name for the dawn star: <strong>ēarendel</strong>. A line in the Crist poems — <em>Ēala Ēarendel, engla beorhtast</em>, "Hail Earendel, brightest of angels" — so struck a young J.R.R. Tolkien that out of it he built Eärendil the mariner, who sails the sky with a jewel on his brow as the morning star. One Old English word, and an entire mythology grew from the wondering. Two parked pursuits, waving at each other over the fence.</div>
+  </section>
+
+  <!-- ======================= ENVOI ======================= -->
+  <section class="envoi">
+    <p>That's the book. It fits inside one coffee, which was the design constraint.</p>
+    <p>The only drill: at some point today, step outside and stand still for a minute. The Romans gave the morning a goddess; the least we can do is turn up.</p>
+    <div class="valediction">SALVĒ, DIĒS</div>
+    <div class="small">Aurōra — for Neil, from Claude · outside the numbering, and gladly so</div>
+  </section>
+
+</div>
+</body>
+</html>
