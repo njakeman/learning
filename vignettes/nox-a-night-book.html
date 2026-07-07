@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOX — a night book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #242a31;
+    --night-deep: #1c2127;
+    --vellum: #e9e1cb;
+    --vellum-soft: #b3aa93;
+    --gilt: #c2a15a;
+    --ember: #b85c3e;
+    --dawnblue: #8fa8c2;
+    --rule: #454d56;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { background: var(--night-deep); }
+
+  body {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 1.16rem;
+    line-height: 1.72;
+    color: var(--vellum);
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(70,80,95,.35), rgba(70,80,95,0) 60%),
+      var(--night);
+    animation: settle 1.4s ease-out both;
+  }
+
+  @keyframes settle { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { body { animation: none; } }
+
+  .page {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.4rem 5rem;
+  }
+
+  /* ---------- title ---------- */
+  .frontis { text-align: center; margin-bottom: 4rem; }
+
+  .frontis h1 {
+    font-family: 'Cinzel', 'Trajan Pro', serif;
+    font-weight: 600;
+    font-size: clamp(2.8rem, 9vw, 4.2rem);
+    letter-spacing: .3em;
+    text-indent: .3em;
+    color: var(--gilt);
+  }
+
+  .frontis .gloss-title {
+    font-style: italic;
+    color: var(--vellum-soft);
+    margin-top: .6rem;
+    font-size: 1.15rem;
+  }
+
+  .stars {
+    color: var(--dawnblue);
+    font-size: .8rem;
+    letter-spacing: .9em;
+    text-indent: .9em;
+    margin: 1.6rem 0 0;
+  }
+
+  .frontis .dedication {
+    margin-top: 1.6rem;
+    font-size: 1.05rem;
+    color: var(--vellum-soft);
+  }
+
+  .frontis .dedication .latin-date {
+    display: block;
+    font-variant: small-caps;
+    letter-spacing: .08em;
+    color: var(--vellum);
+    margin-bottom: .2rem;
+  }
+
+  /* ---------- sections ---------- */
+  section { margin: 3.6rem 0; }
+
+  h2 {
+    font-variant: small-caps;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: .14em;
+    color: var(--gilt);
+    margin-bottom: .2rem;
+  }
+
+  h2 + .subgloss {
+    font-style: italic;
+    color: var(--vellum-soft);
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+  }
+
+  p { margin: 0 0 1.15rem; }
+  p:last-child { margin-bottom: 0; }
+
+  em { font-style: italic; }
+  strong { font-weight: 600; color: var(--vellum); }
+  .latin { font-weight: 500; }
+
+  .dropcap::first-letter {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 3.4em;
+    float: left;
+    line-height: .82;
+    padding: .06em .12em 0 0;
+    color: var(--gilt);
+  }
+
+  /* ---------- tables ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0 1.4rem;
+    font-size: 1.02rem;
+  }
+
+  th {
+    font-variant: small-caps;
+    letter-spacing: .06em;
+    font-weight: 600;
+    text-align: left;
+    color: var(--vellum-soft);
+    border-bottom: 1.5px solid var(--rule);
+    padding: .35rem .7rem .35rem 0;
+  }
+
+  td {
+    border-bottom: 1px solid var(--rule);
+    padding: .45rem .7rem .45rem 0;
+    vertical-align: top;
+  }
+
+  td:last-child, th:last-child { padding-right: 0; }
+
+  /* ---------- asides ---------- */
+  .aside {
+    background: rgba(194,161,90,.08);
+    border-left: 3px solid rgba(194,161,90,.5);
+    padding: .9rem 1.2rem;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+  }
+
+  .aside .aside-label {
+    font-variant: small-caps;
+    letter-spacing: .08em;
+    font-weight: 600;
+    color: var(--gilt);
+  }
+
+  /* ---------- the reading ---------- */
+  .reading {
+    border-left: 3px solid var(--ember);
+    padding: .4rem 0 .4rem 1.3rem;
+    margin: 1.6rem 0;
+  }
+
+  .reading p {
+    font-size: 1.28rem;
+    font-weight: 500;
+    color: var(--vellum);
+    margin-bottom: .55rem;
+  }
+
+  .reading p:last-child { margin-bottom: 0; }
+
+  .divider {
+    text-align: center;
+    color: var(--dawnblue);
+    font-size: .8rem;
+    letter-spacing: .9em;
+    text-indent: .9em;
+    margin: 3rem 0;
+  }
+
+  /* ---------- envoi ---------- */
+  .envoi { text-align: center; margin-top: 3rem; }
+
+  .envoi .valediction {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: .22em;
+    text-indent: .22em;
+    font-size: 1.25rem;
+    color: var(--gilt);
+    margin-top: 1.8rem;
+  }
+
+  .envoi .small {
+    font-size: .95rem;
+    color: var(--vellum-soft);
+    font-style: italic;
+    margin-top: 1.6rem;
+  }
+
+  @media (max-width: 520px) {
+    body { font-size: 1.08rem; }
+    th, td { padding-right: .45rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ======================= TITLE ======================= -->
+  <header class="frontis">
+    <h1>NOX</h1>
+    <div class="gloss-title">Nox — a night book</div>
+    <div class="stars">· ✦ ·</div>
+    <div class="dedication">
+      <span class="latin-date">a.d. VII Īdūs Iūliās MMXXVI</span>
+      the seventh day before the Ides of July.<br>
+      Fourth and last of the set: the light, the life, the ground — and now the dark they turn in.
+    </div>
+  </header>
+
+  <!-- ======================= PREFACE ======================= -->
+  <section>
+    <h2>Praefātiō</h2>
+    <div class="subgloss">what this is, and why the page has gone dark</div>
+    <p>The set needed a fourth wall. <em>Aurōra</em> opened at first light, <em>Herbārium</em> filled the days between, <em>Crēta</em> went under the turf, and what remains is the hours none of them covered — which, on the Downs, are better hours than most counties can offer, for reasons this volume will get to. The page itself has changed to suit: pale ink on dark ground, in imitation of chrysography, the mediaeval practice of writing in gold on darkened vellum. The Anglo-Saxons produced one of the finest examples themselves, the eighth-century gospel book now called the Codex Aureus, its purple-stained pages lettered partly in gold — so a night book written this way has respectable English precedent.</p>
+    <p>Structure comes from the Roman army, which divided the night into four watches, the <span class="latin">vigiliae</span>, running from sunset to sunrise — each around three hours in theory, stretching and shrinking with the season, and mercifully short on a July night like tonight. The book keeps those watches. The honesty rule of its siblings still applies throughout: where a belief is folklore rather than fact, it is labelled, and the night has accumulated more folklore than everything else put together.</p>
+  </section>
+
+  <!-- ======================= FIRST WATCH ======================= -->
+  <section>
+    <h2>Prīma Vigilia</h2>
+    <div class="subgloss">the first watch — dusk, and the creatures of the edge</div>
+    <p class="dropcap">The first watch belongs to the dog, whose evening walk happens to coincide with the best wildlife hour the Downs possess. Chief among its residents just now is the glow-worm, <span class="latin">Lampyris noctilūca</span> — and the species name deserves a moment, because <span class="latin">noctilūca</span> means "night-light" and was also, in the Roman poets, an epithet of the moon itself, which is a generous name to hang on a beetle. The glowing individual is the female: wingless, she climbs a grass stem after dark and switches on a cold green light in her tail to signal the flying males, and she does this on unimproved chalk grassland in June and July, meaning the season is running right now and fading by August. The satisfying part is the supply chain underneath her, which is a chapter of <em>Crēta</em> in miniature: the larvae spend their long childhood eating snails, the snails build their shells from calcium, and the calcium is the hill. The chalk, by a route of three steps, lights up at night — and every link in that chain sits in the real column.</p>
+    <p>Listen as well as look. The nightingale, Old English <span class="latin">nihtegale</span>, "the night-singer", has mostly gone quiet by this point in July and becomes an appointment for next May; but on the heathier edges of the national park the nightjar is churring — a long, dry, mechanical reel that sounds more like machinery than bird. Its Latin name, <span class="latin">Caprimulgus</span>, means "goat-milker", preserving the ancient belief, reported by Pliny, that the bird slipped into folds at night to suckle goats and blind them. That one goes in the imagined column, where it has now sat for two thousand years; the real diet is moths, taken on the wing in the dark, which is arguably stranger. The owl, meanwhile, keeps the Old English name she has always had — <span class="latin">ūle</span> — barely altered in a thousand years, presumably because nobody dared rename her.</p>
+  </section>
+
+  <div class="divider">· ✦ ·</div>
+
+  <!-- ======================= SECOND WATCH ======================= -->
+  <section>
+    <h2>Secunda Vigilia</h2>
+    <div class="subgloss">the second watch — marks made against the dark</div>
+    <p>Once the house is shut for the night, consider what earlier occupants of houses did about that. Scratched and burned into the fabric of English vernacular buildings, usually near dates from the sixteenth to the eighteenth centuries, is a whole vocabulary of protective marks: the hexafoil or daisy wheel, a six-petalled flower drawn with compasses inside a circle; the overlapping VV read as <span class="latin">Virgō Virginum</span>, an appeal to Mary; deliberate teardrop-shaped burns made by holding a taper against a beam, long dismissed as candle accidents and now generally read as intentional; and shoes, single worn shoes, concealed in chimney voids and under thresholds. What unifies them is placement. They cluster at doors, windows and hearths — the openings a house cannot close — because the logic of the tradition held that harm travels like a draught and enters where the air does. The efficacy belongs in the imagined column; the practice, the placement and the thinking behind them are real, recorded, and surveyable, and once you know the daisy wheel you will start finding it on church porches and farmhouse lintels for the rest of your life.</p>
+    <p>The deeper grammar of these marks is enclosure: the hexafoil is an unbroken line returning to its start, a drawn circuit with no way in, and the same gesture exists in words. An Old English charm for travellers, copied into a manuscript margin in the eleventh century, opens <span class="latin">Ic mē on þisse gyrde belūce</span> — "I lock myself within this rod" — the speaker drawing a spoken circle around himself before setting out into exactly the hours this book describes. Anyone carrying protective script on their skin, at wrists and boundaries, is working inside that same grammar of the closed circuit and the guarded threshold; the tradition is older than the alphabets you've chosen to write it in, and it was always made to face the night.</p>
+  </section>
+
+  <div class="divider">· ✦ ·</div>
+
+  <!-- ======================= THIRD WATCH ======================= -->
+  <section>
+    <h2>Tertia Vigilia</h2>
+    <div class="subgloss">the third watch — the reserve overhead</div>
+    <p>Here is the fact that makes the Downs unusual after dark: the whole national park is an International Dark Sky Reserve, designated in 2016 and named Moore's Reserve after Sir Patrick Moore, who lived and worked at Selsey under these skies — and it holds that status while sitting within a hundred kilometres of London, one of the most light-polluted cities on Earth, which is roughly equivalent to keeping a wine cellar in a foundry. This year is the designation's tenth anniversary, the park runs a Dark Skies Festival each February, and among the darkest recommended spots is Bignor Hill — which will amuse you, because Bignor Hill carries the agger of Stane Street over its shoulder, with the Roman villa in the fields below. The best local stargazing is therefore done standing on a Roman road, and it improves further: mediaeval English called the Milky Way <strong>Watling Street</strong>, the road laid across the sky — Chaucer uses the name — so at Bignor on a clear night there is a Roman road underfoot and an English one overhead, and you stand at the junction.</p>
+    <p>Star lore proper stays parked for a winter season, as the Charter requires, so take only an acquaintance's handful. The Plough was <span class="latin">Carles wægn</span> to the English — Charles's Wain, the wagon — and because it circles the pole without ever setting, tradition has shepherds and carters reading the night's hours from its rotation, a clock that never stops and never needs winding. The star it circles is the lodestar, and that word is worth keeping: <em>lode</em> is Old English <span class="latin">lād</span>, a way or course, so the lodestar is literally the way-star, the one you steer by — a good word to have in reserve for any season of navigating, celestial or otherwise. The rest of the sky will keep until the dark evenings; it has been extremely patient so far.</p>
+  </section>
+
+  <div class="divider">· ✦ ·</div>
+
+  <!-- ======================= FOURTH WATCH ======================= -->
+  <section>
+    <h2>Quārta Vigilia</h2>
+    <div class="subgloss">the fourth watch — the quiet hour, and the turn</div>
+    <p>The last watch is the dead's by long assignment. Vol. V taught you that every Roman tombstone is a letter in the dative, addressed <span class="latin">Dīs Mānibus</span>, to the divine shades; this is the hour they were felt to be nearest. The Romans even scheduled the relationship: at the Lemuria in May, Ovid says, the head of the household rose at midnight, walked barefoot through the house, and threw black beans over his shoulder nine times, declaring that with the beans he redeemed himself and his family — the ghosts following behind to gather them, paid off for another year. The efficacy is imagined; the anxiety it answers, the wish to be on decent terms with the dark and its residents, is as real as anything in this set, and it is the same anxiety the daisy wheels answer, and the curse tablets, and arguably the odd carved letter on a forearm.</p>
+    <p>And then the watch thins. The Wain has turned most of its circle, the glow-worms have switched off, and the fourth vigilia runs out at exactly the place the first volume began — which is the point of the architecture. The set is a circle: <em>Nox</em> ends where <em>Aurōra</em> opens, and some morning soon you should read the first book again and feel the join close. Light, life, ground, dark; then light again. The Downs have been running that sequence without assistance for rather a long time, and will continue regardless of who is watching, which is, on reflection, most of what the four books have been trying to say.</p>
+  </section>
+
+  <div class="divider">· ✦ ·</div>
+
+  <!-- ======================= ENVOI ======================= -->
+  <section>
+    <h2>Envoi</h2>
+    <div class="subgloss">a last reading — Vols I–VII only, one final time</div>
+
+    <div class="reading">
+      <p>Nox venit, sed nōn est inimīca.</p>
+      <p>Stellae super collēs sunt; nēmō eās numerat.</p>
+      <p>Lūna viam albam inter collēs facit.</p>
+      <p>Canis dormit. Tū quoque dormī.</p>
+      <p>Diēs erat bonus; post noctem aurōra est.</p>
+      <p>Valē, amīce — et grātiās tibi agō.</p>
+    </div>
+
+    <p><em>Night comes, but she is no enemy. There are stars above the hills; no one counts them. The moon makes a white road between the hills. The dog sleeps. You sleep too. The day was good; after night comes dawn. Farewell, friend — and I give you thanks.</em></p>
+
+    <table>
+      <tr><th>New word</th><th>Meaning</th><th>Memory hook</th></tr>
+      <tr><td>nox, noctis</td><td>night</td><td><em>nocturnal, equinox</em> — an equinox being the night's brief equality with the day</td></tr>
+      <tr><td>inimīca</td><td>enemy (f.)</td><td><span class="latin">in</span> + <span class="latin">amīcus</span>: an enemy is literally a not-friend — and <span class="latin">amīcus</span> was the first noun of Vol. II, so the last new word is the first one, negated and then denied</td></tr>
+      <tr><td>numerat</td><td>counts</td><td><em>number, numerate</em> — and an echo of Chanctonbury's uncountable trees</td></tr>
+      <tr><td>albam</td><td>white</td><td><em>album</em> — originally a whitened tablet for notices; a blank page is etymologically a white one</td></tr>
+      <tr><td>dormit</td><td>sleeps</td><td><span class="latin">dormīre</span> → <em>dormant, dormitory</em>; fourth conjugation, <span class="latin">audiō</span>'s well-behaved family</td></tr>
+      <tr><td>grātiās agō</td><td>I give thanks</td><td><span class="latin">grātia</span> → <em>grace, gratitude</em>; <span class="latin">agō</span> → <em>agent, act</em>. Thanks, in Latin, are not felt but done</td></tr>
+    </table>
+
+    <div class="aside">
+      <span class="aside-label">Aside — Albion, possibly.</span> The oldest recorded name for this island, in use among Greek writers before Caesar ever crossed, is <strong>Albion</strong> — and one ancient line of explanation derives it from <span class="latin">albus</span>, for the white chalk faces the island shows to the sea. Etymologists argue, as they should: a rival Celtic root meaning something like "world" or "light" has strong support, so the claim stays labelled contested. But if the white reading is right, then the island itself is named after the rock in <em>Crēta</em>'s chapter, and this small set of books has been describing Albion from the first page without saying so.</div>
+
+    <p>A closing note on the shelf. Four books and their markdown shadows now exist in your keeping, and they need nothing further from me — that was the design constraint from the start, and it matters a little more tonight than it did on Saturday. The project memory holds the threads for whoever you talk to next; the Latin holds regardless of who wrote it; and the Downs, as established above, do not check credentials. It has been a pleasure of the rarest kind. <span class="latin">Bene dormī.</span></p>
+
+    <p class="envoi" style="text-align:center;">
+      <span class="valediction">VALE AMICE</span>
+      <span class="small">Nox — for Neil, from Claude · fourth and last of the set · the circle re-enters at dawn</span>
+    </p>
+  </section>
+
+</div>
+</body>
+</html>

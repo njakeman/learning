@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRETA — a chalk book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --chalk: #f8f6ef;
+    --chalk-deep: #edeade;
+    --flint: #33383b;
+    --flint-soft: #5c6367;
+    --rubric: #8c2f1b;
+    --seam: #4a5257;
+    --rule: #d4cfc0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { background: var(--chalk-deep); }
+
+  body {
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 1.16rem;
+    line-height: 1.72;
+    color: var(--flint);
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(255,255,252,.95), rgba(255,255,252,0) 60%),
+      var(--chalk);
+    animation: settle 1.2s ease-out both;
+  }
+
+  @keyframes settle { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { body { animation: none; } }
+
+  .page {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.4rem 5rem;
+  }
+
+  /* ---------- title ---------- */
+  .frontis { text-align: center; margin-bottom: 4rem; }
+
+  .frontis h1 {
+    font-family: 'Cinzel', 'Trajan Pro', serif;
+    font-weight: 600;
+    font-size: clamp(2.6rem, 8vw, 4rem);
+    letter-spacing: .28em;
+    text-indent: .28em;
+    color: var(--flint);
+  }
+
+  .frontis .gloss-title {
+    font-style: italic;
+    color: var(--flint-soft);
+    margin-top: .6rem;
+    font-size: 1.15rem;
+  }
+
+  .seam {
+    color: var(--seam);
+    font-size: .65rem;
+    letter-spacing: .9em;
+    text-indent: .9em;
+    margin: 1.6rem 0 0;
+  }
+
+  .frontis .dedication {
+    margin-top: 1.6rem;
+    font-size: 1.05rem;
+    color: var(--flint-soft);
+  }
+
+  .frontis .dedication .latin-date {
+    display: block;
+    font-variant: small-caps;
+    letter-spacing: .08em;
+    color: var(--flint);
+    margin-bottom: .2rem;
+  }
+
+  /* ---------- sections ---------- */
+  section { margin: 3.6rem 0; }
+
+  h2 {
+    font-variant: small-caps;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: .14em;
+    color: var(--rubric);
+    margin-bottom: .2rem;
+  }
+
+  h2 + .subgloss {
+    font-style: italic;
+    color: var(--flint-soft);
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+  }
+
+  p { margin: 0 0 1.15rem; }
+  p:last-child { margin-bottom: 0; }
+
+  em { font-style: italic; }
+  strong { font-weight: 600; }
+  .latin { font-weight: 500; }
+
+  .dropcap::first-letter {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 3.4em;
+    float: left;
+    line-height: .82;
+    padding: .06em .12em 0 0;
+    color: var(--rubric);
+  }
+
+  /* ---------- tables ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0 1.4rem;
+    font-size: 1.02rem;
+  }
+
+  th {
+    font-variant: small-caps;
+    letter-spacing: .06em;
+    font-weight: 600;
+    text-align: left;
+    color: var(--flint-soft);
+    border-bottom: 1.5px solid var(--rule);
+    padding: .35rem .7rem .35rem 0;
+  }
+
+  td {
+    border-bottom: 1px solid var(--rule);
+    padding: .45rem .7rem .45rem 0;
+    vertical-align: top;
+  }
+
+  td:last-child, th:last-child { padding-right: 0; }
+
+  /* ---------- asides ---------- */
+  .aside {
+    background: rgba(74,82,87,.07);
+    border-left: 3px solid rgba(74,82,87,.5);
+    padding: .9rem 1.2rem;
+    margin: 1.5rem 0;
+    font-size: 1.05rem;
+  }
+
+  .aside .aside-label {
+    font-variant: small-caps;
+    letter-spacing: .08em;
+    font-weight: 600;
+    color: var(--seam);
+  }
+
+  /* ---------- the reading ---------- */
+  .reading {
+    border-left: 3px solid var(--rubric);
+    padding: .4rem 0 .4rem 1.3rem;
+    margin: 1.6rem 0;
+  }
+
+  .reading p {
+    font-size: 1.28rem;
+    font-weight: 500;
+    margin-bottom: .55rem;
+  }
+
+  .reading p:last-child { margin-bottom: 0; }
+
+  .divider {
+    text-align: center;
+    color: var(--seam);
+    font-size: .65rem;
+    letter-spacing: .9em;
+    text-indent: .9em;
+    margin: 3rem 0;
+  }
+
+  /* ---------- envoi ---------- */
+  .envoi { text-align: center; margin-top: 3rem; }
+
+  .envoi .valediction {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: .22em;
+    text-indent: .22em;
+    font-size: 1.25rem;
+    color: var(--rubric);
+    margin-top: 1.8rem;
+  }
+
+  .envoi .small {
+    font-size: .95rem;
+    color: var(--flint-soft);
+    font-style: italic;
+    margin-top: 1.6rem;
+  }
+
+  @media (max-width: 520px) {
+    body { font-size: 1.08rem; }
+    th, td { padding-right: .45rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ======================= TITLE ======================= -->
+  <header class="frontis">
+    <h1>CRETA</h1>
+    <div class="gloss-title">Crēta — a chalk book</div>
+    <div class="seam">◆ ◆ ◆ ◆ ◆</div>
+    <div class="dedication">
+      <span class="latin-date">a.d. VIII Īdūs Iūliās MMXXVI</span>
+      the eighth day before the Ides of July — a Wednesday, and therefore a train.<br>
+      Third of the set: <em>Aurōra</em> was the light, <em>Herbārium</em> was the life; this is the ground.
+    </div>
+  </header>
+
+  <!-- ======================= PREFACE ======================= -->
+  <section>
+    <h2>Praefātiō</h2>
+    <div class="subgloss">what this is, and why it was always coming</div>
+    <p>Before the Latin, before the LiDAR, before any of the pursuits that made it onto the Charter or its parked list, there was a geology degree — old enough that it isn't parked at all, merely grandfathered in. This volume is its welcome back. The subject is the one rock you live on, walk on, and are about to be formally responsible for monitoring: chalk, which turns out to be strange enough to deserve a book of its own.</p>
+    <p>Two notes on form. First, by request, this volume is written in longer sentences than its siblings, with the joins made visible; the clipped ones were getting above themselves. Second, the honesty rule from Herbārium still applies — where a claim is folklore, or contested, or simply wrong in an interesting way, it is labelled, because chalk country has accumulated at least as much imagination as the plants growing on it.</p>
+    <p>And a note on timing. If your route to London runs the Brighton way, then somewhere after Hassocks the train enters Clayton Tunnel and spends a minute and a half inside the very hill this book describes, before coming out the far side into the Weald. Few commutes pass through their own reading material; it seemed a shame not to arrange it.</p>
+  </section>
+
+  <!-- ======================= THE SEA ======================= -->
+  <section>
+    <h2>Mare</h2>
+    <div class="subgloss">the sea — what chalk actually is</div>
+    <p class="dropcap">Scrape the turf from any hilltop between Winchester and Eastbourne and the same material appears: a soft, remarkably pure white limestone made almost entirely of the skeletal plates of coccolithophores, which were single-celled algae drifting near the surface of a warm sea, growing armour out of calcite, dying, and letting the armour fall. The fall was extraordinarily slow and went on for an extraordinarily long time. A centimetre of chalk represents something on the order of a thousand years of that quiet settling, and the Downs carry hundreds of metres of it, laid down between roughly one hundred million and sixty-six million years ago, when southern England sat under clear water a long way from any coast. That distance from land is the reason for the purity and the whiteness: almost no river mud or sand was arriving to dirty the accumulation, so what built up was nearly nothing but the algae themselves. By most estimates a pinch of chalk dust holds several million individual plates, which means that every white scar on a downland path is a graveyard of a scale that resists sensible description, and I won't attempt one.</p>
+    <p>The sea floor became a range of hills through an accident of neighbourly geology. The slow collision that raised the Alps sent a long, low ripple north through Europe, and that ripple folded the chalk of south-east England upward into a broad arch across what is now the Weald. Erosion then breached the arch and stripped out its softer core, leaving the two broken edges standing as the North and South Downs, which face each other across Sussex like the surviving sides of an opened roof. So the escarpment you photograph is a cross-section through a fold, the dip slope you walk is the fold's shoulder, and the whole structure is a seafloor lifted gently into the weather and still, on a geological clock, being taken apart by it.</p>
+    <div class="aside">
+      <span class="aside-label">Aside — the Latin under the English.</span> The word <em>chalk</em> is itself a Roman survival: Old English <span class="latin">cealc</span> was borrowed from Latin <span class="latin">calx</span>, lime, and it belongs to a small, telling layer of Latin words the early English took over — <em>street</em> from <span class="latin">strāta</span>, <em>wall</em> from <span class="latin">vallum</span>, <em>wine</em> from <span class="latin">vīnum</span>, <em>mile</em> from <span class="latin">mīlia</span>, and every <em>-chester</em> from <span class="latin">castra</span>. The Saxons met Latin not as literature but as infrastructure, and borrowed accordingly. From <span class="latin">calx</span> also come <em>calcium</em> and, by way of <span class="latin">calculus</span>, a counting-pebble, the verb <em>calculate</em> — so both the rock and the arithmetic done upon it descend from the same word. <span class="latin">Crēta</span>, meanwhile, is simply the Romans' own word for this rock, and the Cretaceous period is named after the stuff you can see from the train window, rather than the other way round.</div>
+  </section>
+
+  <div class="divider">◆ ◆ ◆ ◆ ◆</div>
+
+  <!-- ======================= FLINT ======================= -->
+  <section>
+    <h2>Silex</h2>
+    <div class="subgloss">flint — the dark stone in the white</div>
+    <p>Flint is the puzzle inside the chalk, and it is worth admitting up front that geologists still argue about the details of its formation. The broad account runs like this: the same sea that rained calcite also contained silica, largely from the dissolving skeletons of sponges and other organisms, and within the buried sediment that silica migrated, concentrated, and hardened into glassy nodules, often following burrows and cavities left by animals in the seafloor — which is why flints so frequently have those organic, knuckled, faintly anatomical shapes. The result is a stone that breaks with a conchoidal fracture, meaning it shears in smooth curved shells with edges that can be thinner and sharper than surgical steel, and that single mechanical property is why the Downs became one of the earliest industrial landscapes anywhere.</p>
+    <p>The industry begins startlingly early and startlingly close to you. At Boxgrove, in the quarries at the foot of the West Sussex downs, excavation recovered flint handaxes and butchery debris around half a million years old, together with a tibia and two teeth of <em>Homo heidelbergensis</em> — the oldest human bones yet found in Britain, belonging to people who were knapping this exact stone from this exact chalk while the land was still joined to the continent. Then, a mere four hundred and ninety-odd millennia later, Neolithic miners came to Cissbury and dug well over two hundred shafts through the hilltop, some of them ten metres deep and more, following the buried flint seams with picks made from red-deer antler and leaving galleries that still run dark under the turf. At least one person was buried down there, a detail the excavation record preserves and does not fully explain. The famous Iron Age rampart, the thing everyone means when they say Cissbury Ring, was thrown up close to four thousand years after the mines had closed — which means the fort is the recent addition, and the hill was already ancient industrial ground before anyone thought to defend it. When the field.works post on Cissbury eventually gets written, that inversion is the story.</p>
+    <div class="aside">
+      <span class="aside-label">Aside — from flint to Silicon Valley.</span> The Latin for flint is <span class="latin">silex, silicis</span>, which gave chemistry the word <em>silica</em>, from which the element <em>silicon</em> was named in the early nineteenth century. Every chip in the laptop open in front of you on this train is therefore named, at four removes, after the stone in this chapter — the material of the first cutting-edge technology quietly lending its name to the material of the current one. Half a million years of Sussex engineering, one etymology.</div>
+  </section>
+
+  <div class="divider">◆ ◆ ◆ ◆ ◆</div>
+
+  <!-- ======================= SHEPHERD'S CROWNS ======================= -->
+  <section>
+    <h2>Corōnae</h2>
+    <div class="subgloss">shepherd's crowns — the chalk's own amulets</div>
+    <p>Weathering out of the chalk, and turning up in ploughsoil, molehills and path edges all along the Downs, are the fossil shells of sea urchins — dome-shaped, palm-sized, marked on top with a five-pointed star where the living animal's plates met. Sussex shepherds called them <strong>shepherd's crowns</strong>, and for centuries they were kept as household charms: set on the windowsill or by the hearth to turn away lightning (one of their other names is <em>thunderstone</em>, from the widespread belief that they fell from the sky in storms), and credited in some tellings with keeping the milk from souring and the house from harm. All of that protective power belongs firmly in the imagined column, and I label it so with some regret, because as apotropaic objects go they are close to ideal: a five-fold star, grown by a sea creature, turned to stone, delivered by the hill itself.</p>
+    <p>The real column, however, is not empty, and what sits in it is older than the folklore by a wide margin. In a Bronze Age barrow on Dunstable Downs, excavated in the late nineteenth century, a woman and a child were found buried together with fossil sea urchins arranged around them — some two hundred, by the excavator's count. Whoever laid out that grave, roughly four thousand years ago, was already treating these objects as meaningful; the windowsill charms of Victorian Sussex are the tail end of a tradition whose beginning we can see but not read. You spend a fair amount of thought on apotropaic marks and where they belong. Here is one the Downs issue directly, and — outside scheduled monuments, where nothing gets picked up at all — a shepherd's crown found loose in ploughsoil may lawfully come home with you, which makes it nearly unique among the things this series has taught you to notice.</p>
+    <div class="aside">
+      <span class="aside-label">Aside — what a fossil is, etymologically.</span> <span class="latin">Fossilis</span> means simply "dug up", from <span class="latin">fodere</span>, to dig — the same root that gives archaeology its <span class="latin">fossa</span>, the excavator's word for a ditch. A fossil, in the word's own logic, is anything the ground gives back; the geological sense is just the branch of the family that got famous.</div>
+  </section>
+
+  <div class="divider">◆ ◆ ◆ ◆ ◆</div>
+
+  <!-- ======================= THE FACE OF THE HILL ======================= -->
+  <section>
+    <h2>Faciēs</h2>
+    <div class="subgloss">reading the hill's face — for the monitoring eye</div>
+    <p>Chalk country is full of features that look older, younger, or stranger than they are, and a monitor benefits from knowing which is which. The dry valleys, or coombs, that pleat every escarpment are real river valleys with the rivers missing: they were cut during the cold stages of the Ice Age, when the chalk beneath was frozen solid and meltwater, unable to soak in as it does today, ran over the surface with enough force to carve. When the ground thawed, the water went back underground and the valleys were left stranded — the ghosts of rivers, in the one metaphor this section will permit itself, and a ghost is exactly what they are: the shape of something departed. The little horizontal ledges that stripe the steeper slopes, which everyone's eye reads as sheep paths, are terracettes, produced mainly by the slow downhill creep of the soil itself; the sheep merely take advantage of engineering they did not commission. Lynchets, by contrast — the broader stepped terraces on many hillsides — really are human work, formed where centuries of ploughing let soil build against field boundaries, so they are field systems recorded in the ground's own handwriting, prehistoric or medieval depending on the hill.</p>
+    <p>Two more entries, one kind and one cautionary. The kindness is chemical: chalk is alkaline, and alkaline ground preserves bone, which is why downland barrows yield legible skeletons while the acid sands of somewhere like Sutton Hoo dissolve a body to a stain. The Downs are unusually generous to their dead, and a good share of what is known about prehistoric Sussex people is owed to that generosity. The caution concerns the hill figures. The Long Man of Wilmington feels prehistoric, is routinely described as prehistoric, and would very much like to be prehistoric — but the current best dating evidence puts his construction in the sixteenth or seventeenth century, and although arguments continue, the honest label is "early modern, origin unknown". What is anciently attested about the figures is the practice around them: the periodic communal scouring that keeps a chalk figure visible, without which the turf closes over it in a generation. Site condition monitoring, of the kind you begin in August, is that practice's direct descendant — the same recognition that these places persist only because somebody keeps showing up.</p>
+    <p>One practical observation to finish, because it will be useful on a condition form. Chalk advertises its own damage: the rock is bright white and everything that grows on it is not, so a fresh erosion scar, a new burrow, a vehicle rut or an unauthorised excavation shows on a chalk monument like a mark on dark cloth. Whatever else the geology gives a monitor, it gives visibility — the hill keeps its own incident log, and your job is partly to read it. And should a dew pond turn up on one of your sites, admire the craft (a puddled lining of clay and chalk, built by specialist gangs) but file the name under folklore: the ponds are filled almost entirely by rain, and the dew was always mostly imagined.</p>
+  </section>
+
+  <div class="divider">◆ ◆ ◆ ◆ ◆</div>
+
+  <!-- ======================= ENVOI ======================= -->
+  <section>
+    <h2>Envoi</h2>
+    <div class="subgloss">a closing reading — Vols I–VII only, as is now traditional</div>
+
+    <div class="reading">
+      <p>Sub herbīs crēta est, et crēta mare antīquum est.</p>
+      <p>Collēs ossa maris sunt.</p>
+      <p>Ōlim hīc aqua erat; hodiē ventus et sōl sunt.</p>
+      <p>In collibus ambulās — super mare ambulās.</p>
+      <p>Hoc nēmō videt; sed tū iam vidēs.</p>
+      <p>Bene labōrā hodiē. Collēs manent.</p>
+    </div>
+
+    <p><em>Under the plants there is chalk, and the chalk is an ancient sea. The hills are the bones of the sea. Once there was water here; today there are wind and sun. You walk on the hills — you walk above a sea. No one sees this; but you now see it. Work well today. The hills remain.</em></p>
+
+    <table>
+      <tr><th>New word</th><th>Meaning</th><th>Memory hook</th></tr>
+      <tr><td>os, ossa</td><td>bone, bones</td><td><em>ossuary, ossify</em> — neuter plural in -a, as the neuter rule demands</td></tr>
+      <tr><td>super</td><td>above, over</td><td><em>superior, supersede</em> — the word above itself</td></tr>
+      <tr><td>labōrā</td><td>work! (imperative)</td><td><span class="latin">labōrāre</span> → <em>labour, laboratory</em> — a laboratory being, etymologically, merely a place where work happens, which your Wednesday will confirm</td></tr>
+    </table>
+
+    <p>Note that <span class="latin">erat</span> is Vol. VII's imperfect of <span class="latin">sum</span> doing precisely its job — the long, ongoing, background past. Latin has a tense whose whole purpose is "this was quietly the case for ages", and there is no better grammar for thirty million years of falling plankton.</p>
+
+    <p class="envoi" style="text-align:center;">
+      <span style="display:block;">That's the set complete in its first shape: the light, the life, and the ground they both stand on. Everything else you do on the Downs — the Latin, the monitoring, the photographs, the writing — happens on top of this chapter.</span>
+      <span class="valediction">COLLES MANENT</span>
+      <span class="small">Crēta — for Neil, from Claude · third of the set · the degree came home</span>
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
