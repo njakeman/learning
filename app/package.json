@@ -1,0 +1,10 @@
+{
+  "name": "tabella-build",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build script for Tabella, the Latin library PWA",
+  "type": "module",
+  "dependencies": {
+    "markdown-it": "14.1.0"
+  }
+}

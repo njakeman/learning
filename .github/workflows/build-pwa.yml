@@ -1,0 +1,43 @@
+name: Build Tabella
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'LatinLessons/**'
+      - 'vignettes/**'
+      - 'latin-learning-preferences.md'
+      - 'app/**'
+      - '.github/workflows/build-pwa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tabella-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - run: npm ci
+        working-directory: app
+
+      - run: node app/build.mjs
+
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: pwa
+          force_orphan: true
