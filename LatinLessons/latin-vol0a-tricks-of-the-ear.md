@@ -1,6 +1,6 @@
 # Latin Reference — Vol. 0.a: Tricks of the Ear
 
-An interstitial at the foundations. Nothing in this volume is new — every form here lives in Vols I–X — but it is all *re-cut for the ear*, in the spirit of the Michel Thomas method: small sounds carrying big grammar, hooks you can hear before you can explain them. Grammar tables are for the eyes; this volume is for the train, the kettle, and the half-attentive drill. Read it aloud or not at all.
+An interstitial at the foundations. Nothing in this volume is new — every form here lives in Vols I–X — but it is all *re-cut for the ear*, in the spirit of the Michel Thomas method: small sounds carrying big grammar, hooks you can hear before you can explain them. Grammar tables are for the eyes; this volume is for the train, the kettle, and the half-attentive drill. Read it aloud or not at all. One verb carries most of the demonstrations below — **amō, amāre**, *to love*, the first conjugation's traditional workhorse — and every Latin form is glossed where it appears, because a hook you can't verify isn't a hook.
 
 ## The six people — endings as sounds you already own
 
@@ -8,12 +8,12 @@ The personal endings (Vol. IV) run the whole verb system. Each has an English ho
 
 | Ending | Person | The hook |
 |---|---|---|
-| -ō / -m | I | **-m is Me** — amāba**m**, amē**m**, era**m**: hear m, think *me* |
+| -ō / -m | I | **-m is Me** — amāba**m** (*I was loving*), era**m** (*I was*): hear m, think *me* |
 | -s | you | English's own fossil: *thou goe**st**, ha**st**, do**st*** — the same ancient -s, still in the King James on your shelf. Hear -s, think *thou* |
-| -t | he/she/it | **-t is iT** — ama**t**, fēci**t**, si**t** |
-| -mus | we | **US is inside -mUS** — amā**mus**: *us*, doing it together |
-| -tis | you (pl.) | **'tis ye** — the courtroom plural: amā**tis**, all of you |
-| -nt | they | **-t plus N for maNy** — one letter turns *it* into *them*: ama**t** → ama**nt** |
+| -t | he/she/it | **-t is iT** — ama**t** (*he loves*), fēci**t** (*he made* — Vol. V's stone verb), si**t** (*may it be* — the verb inside R.I.P., Vol. X) |
+| -mus | we | **US is inside -mUS** — amā**mus** (*we love*): *us*, doing it together |
+| -tis | you (pl.) | **'tis ye** — the courtroom plural: amā**tis** (*you all love*) |
+| -nt | they | **-t plus N for maNy** — one letter turns *it* into *them*: ama**t** → ama**nt** (*he loves* → *they love*) |
 
 The -s and -m hooks are genuine cousins, not mnemonics: English and Latin inherited the same Indo-European endings, so *thou lovest* and *amās* are the same machinery, weathered differently. You have been conjugating in the Latin manner since Sunday school.
 
@@ -34,16 +34,16 @@ And the single most useful aural trick in the library — **stress tells 2nd fro
 
 | Hear | Think | Because |
 |---|---|---|
-| **-bā-** | *was / used to* | the imperfect's baa — the sound of the past bleating away: amā**bā**t (Vol. VII) |
-| **bo-bi-bu** | *tomorrow* (AH and EH verbs only) | amā**bō**, amā**bi**s, amā**bu**nt (Vol. VIII) |
-| **-v- + ī** | *I've* | amā**vī** — the v of *I've loved*: pure coincidence, permanently sticky (Vol. VIII) |
-| **-erā-** | *had* | amāv**erā**mus — an **era** ago, already done (Vol. VIII) |
+| **-bā-** | *was / used to* | the imperfect's baa — the sound of the past bleating away: amā**ba**t (*he was loving*, Vol. VII) |
+| **bo-bi-bu** | *tomorrow* (AH and EH verbs only) | amā**bō** (*I shall love*), amā**bi**s (*you will love*), amā**bu**nt (*they will love*) (Vol. VIII) |
+| **-v- + ī** | *I've* | amā**vī** (*I've loved / I loved*) — the v of *I've*: pure coincidence, permanently sticky (Vol. VIII) |
+| **-erā-** | *had* | amāv**erā**mus (*we had loved*) — an **era** ago, already done (Vol. VIII) |
 
-Add the mood-smell from Vol. X — **an unexpected ā is a wish** (*venit* → *veniat*) — and the ear can date and mood-check most verbs before the eye finishes reading them.
+Add the mood-smell from Vol. X — **an unexpected ā is a wish** (*venit* → *veniat*: *he comes* → *may he come*) — and the ear can date and mood-check most verbs before the eye finishes reading them.
 
 ## The five constants — one rule where you feared five
 
-The declensions (Vols I–II) look like five separate mountains. Underneath, five constants run through **all of them**, and they do most of the work of reading:
+The declensions (Vols I–II) look like five separate mountains. Underneath, five constants run through **all of them**, and they do most of the work of reading. The parade nouns below are the library's own, Vols I–II: **puella** *girl*, **amīcus** *friend*, **mīles** *soldier*, **exercitus** *army*, **diēs** *day* — with **templum** *temple* and **flūmen** *river* standing in for the neuter law:
 
 | Constant | The sound | Across the declensions |
 |---|---|---|
