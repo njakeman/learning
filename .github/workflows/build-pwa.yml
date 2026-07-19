@@ -41,3 +41,4 @@ jobs:
           publish_dir: ./dist
           publish_branch: pwa
           force_orphan: true
+          cname: tabella.field.works
