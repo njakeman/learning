@@ -93,6 +93,8 @@ Particles are the genuinely unchanging small words — no cases, no genders, no 
 | igitur | therefore | usually second word — Latin likes its logic one step in |
 | nōn | not | parks directly before the word it denies |
 | -ne | (question marker) | suffixed to the first word: vidēs**ne**? — "do you see?" |
+| ubi | where?; when | a double life: interrogative in questions (**ubi** est ānulus?), but a conjunction meaning *when / as soon as* whenever it opens a clause with its own verb — **ubi** vēnimus, *when we arrived*. Latin treats a moment as a place you arrive at (Vol. 0.b) |
+| cum | when, since, although | two different words share this spelling: the preposition cum + ablative (*with*, Vol. I) and the conjunction that opens a clause (Vol. X). The company it keeps tells you which has turned up — a noun in the ablative beside it, or a verb of its own |
 
 > **Aside — hic et nunc.** Two of the smallest words in this volume carry one of the larger ideas: *hīc et nunc*, "here and now" — still used unchanged in English philosophical and legal prose. The pointing word, pointing at the present.
 

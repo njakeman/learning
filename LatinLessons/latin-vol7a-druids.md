@@ -74,4 +74,4 @@ The end of the story, at the Menai Strait. Suetonius Paulinus assaults Anglesey 
 
 ## The drill
 
-The three Caesar sentences are the workout: read each cold, find the signal verb, mark the reported clause, translate — then check the reveal. When *dīcuntur… ēdiscere* parses without effort, Vol. VIII has effectively begun and may as well be unparked. For the field component: Anglesey still holds Llyn Cerrig Bach, the lake that yielded a great Iron Age votive hoard — plausibly the sanctuary's own treasury, now in Cardiff. The groves are gone; the lake kept the receipts.
+The three Caesar sentences are the workout: read each cold, find the signal verb, mark the reported clause, translate — then check the reveal. When *dīcuntur… ēdiscere* parses without effort, Vol. IX has effectively begun and may as well be unparked. For the field component: Anglesey still holds Llyn Cerrig Bach, the lake that yielded a great Iron Age votive hoard — plausibly the sanctuary's own treasury, now in Cardiff. The groves are gone; the lake kept the receipts.
