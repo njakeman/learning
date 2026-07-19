@@ -41,15 +41,17 @@ English forms: *was writing*, *used to write*, and — the sneaky one — habitu
 
 ### Perfect — the snapshot
 
-English forms: *wrote* **and** *has written* — and here is the single biggest friction point between the languages, so it gets its own flag: **English has two past forms where Latin has one**. "She wrote" and "she has written" are both *scrīpsit*; context supplies the flavour. English also wraps its questions and negatives in *did* — "**did** you see it?", "I **didn't** go" — and all of that *did*-machinery is, in Latin, just the perfect: *vīdistī?* If the imperfect is footage, the perfect is the click of a shutter: the event, complete, filed. In storytelling the division of labour is clean — **imperfect paints the scene, perfect advances the plot**: "The rain was falling (scene)… and then the phone **rang** (plot)."
+English forms: *wrote* **and** *has written* — and here is the single biggest friction point between the languages, so it gets its own flag: **English has two past forms where Latin has one**. "She wrote" and "she has written" are both *scrīpsit*; context supplies the flavour. English also wraps its questions and negatives in *did* — "**did** you see it?", "I **didn't** go" — and all of that *did*-machinery is, in Latin, just the perfect: *vīdistī?* If the imperfect is footage, the perfect is the click of a shutter: the event, complete, filed. In storytelling the division of labour is clean — **imperfect paints the scene, perfect advances the plot**: "The rain **was falling** (imperfect — scene)… and then the phone **rang** (perfect — plot)."
 
 ### Pluperfect — the flashback
 
-The "had" tense, and once you hear that, the opacity is gone. You use it whenever a story needs to step *behind its own timeline*: "When I got to the platform, the train **had left**." "She realised she **had forgotten** the keys." Both verbs are past, but one is *further* past — done before the other done thing. That's all "more than done" ever meant. Every flashback in every anecdote you've ever told ran on this tense; you were fluent in the pluperfect long before you'd heard of it.
+The "had" tense, and once you hear that, the opacity is gone. You use it whenever a story needs to step *behind its own timeline*: "When I **got** to the platform (perfect), the train **had left** (pluperfect)." "She **realised** (perfect) she **had forgotten** the keys (pluperfect)." Both verbs are past, but one is *further* past — done before the other done thing. That's all "more than done" ever meant.
+
+And notice the pairing is structural, not accidental: a pluperfect rarely travels alone, because "more than done" needs a "done" to be more than. The perfect is the **anchor** — it plants the reference point in the past — and the pluperfect steps behind it. Even a lone "the train had left" smuggles its anchor in: the arriving is implied. So when you meet a pluperfect, on the page or in your own mouth, look for its perfect partner; it is almost always in the same sentence or the one before. Every flashback in every anecdote you've ever told ran on this pairing; you were fluent in the pluperfect long before you'd heard of it.
 
 ### Future perfect — the deadline
 
-The "will have" tense: looking *back* from a point that hasn't arrived yet. "By Friday I **will have finished** the report." "By the time you read this, I'**ll have landed**." English uses it more than people think — every "by [deadline], done" sentence is one. Latin, as Vol. VIII showed, positively loved it, because law and curses both address deeds that will-be-done: *quī cēperit* — whoever will-have-taken.
+The "will have" tense: looking *back* from a point that hasn't arrived yet. "By Friday I **will have finished** the report (future perfect)." "By the time you **read** this, I'**ll have landed**" — *'ll have landed* future perfect, and *read* worth a second glance: present in form, future in meaning. English quietly uses the present tense in by-the-time clauses about the future; Latin refuses the fudge and timestamps it future perfect (*lēgeris* — Vol. VIII's Roman timestamp, vindicated by your own sentence patterns). English uses this tense more than people think — every "by [deadline], done" sentence is one. Latin, as Vol. VIII showed, positively loved it, because law and curses both address deeds that will-be-done: *quī cēperit* — whoever will-have-taken.
 
 ## Spot the tense
 
@@ -78,7 +80,7 @@ Everyday English; name the tense before revealing. Each reveal gives the reasoni
 <details>
 <summary>Reveal</summary>
 
-*Had started* — **pluperfect**: done before another past moment. *Coeperat*. The flashback tense, in its natural habitat of mild disappointment.
+Two tenses here, working as a pair. *Arrived* — **perfect**: the anchor event, plain past, done. *Had started* — **pluperfect**: done *before* the arriving — "more than done", measured against the anchor. In Latin: **Ubi vēnimus, fābula iam coeperat** — *vēnimus* perfect, *coeperat* pluperfect, with *iam* ("already") supplying the ruefulness. The flashback tense, in its natural habitat of mild disappointment.
 
 </details>
 
