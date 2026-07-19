@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tabella · a Latin library</title>
+<meta name="tabella-root" content="./">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/favicon.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tabella">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f5eeda" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c2127" media="(prefers-color-scheme: dark)">
+<script>(function(){try{var t=localStorage.getItem('tabella:theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="./assets/styles.css">
+<script defer src="./assets/app.js"></script>
+<script defer src="./assets/search.js"></script>
+</head>
+<body class="shelf">
+<header class="chrome">
+<a class="wordmark" href="./index.html">TABELLA</a>
+<div class="controls"><button id="theme-toggle" type="button" aria-label="Toggle light and dark theme">◐</button></div>
+</header>
+<main>
+<header class="frontis">
+<h1>TABELLA</h1>
+<div class="gloss-title">a Latin library, carried in the hand</div>
+<div class="seam" aria-hidden="true"></div>
+</header>
+<a id="continue-card" class="continue-card" href="#" hidden>
+<span class="continue-label">Continue reading</span>
+<span id="continue-title" class="continue-title"></span>
+</a>
+<div class="search">
+<input id="search-input" type="search" placeholder="Quaere in bibliothēcā…" aria-label="Search the library" autocomplete="off">
+<ol id="search-results" class="search-results" hidden></ol>
+</div>
+<section class="shelf-section">
+<h2>I · The Reference Spine</h2>
+<ol class="shelf-list">
+<li><a href="docs/latin-vol0-reading-the-marks.html" data-slug="latin-vol0-reading-the-marks">Vol. 0: Reading the Marks</a><button class="read-mark" type="button" data-slug="latin-vol0-reading-the-marks" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol0-english-cases.html" data-slug="latin-vol0-english-cases">Vol. 0: The Cases Hiding in English</a><button class="read-mark" type="button" data-slug="latin-vol0-english-cases" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol0a-tricks-of-the-ear.html" data-slug="latin-vol0a-tricks-of-the-ear">Vol. 0.a: Tricks of the Ear</a><button class="read-mark" type="button" data-slug="latin-vol0a-tricks-of-the-ear" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol0b-time-in-plain-english.html" data-slug="latin-vol0b-time-in-plain-english">Vol. 0.b: Time in Plain English</a><button class="read-mark" type="button" data-slug="latin-vol0b-time-in-plain-english" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol1-cases.html" data-slug="latin-vol1-cases">Vol. I: The Case System</a><button class="read-mark" type="button" data-slug="latin-vol1-cases" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol2-declensions.html" data-slug="latin-vol2-declensions">Vol. II: All Five Declensions, Worked</a><button class="read-mark" type="button" data-slug="latin-vol2-declensions" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol3-adjectives.html" data-slug="latin-vol3-adjectives">Vol. III: Adjective Agreement</a><button class="read-mark" type="button" data-slug="latin-vol3-adjectives" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol3a-demonstratives.html" data-slug="latin-vol3a-demonstratives">Vol. III.a: Pointing Words &amp; Particles</a><button class="read-mark" type="button" data-slug="latin-vol3a-demonstratives" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol3b-possessives.html" data-slug="latin-vol3b-possessives">Vol. III.b: Possessive Words</a><button class="read-mark" type="button" data-slug="latin-vol3b-possessives" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol3c-ambiguity.html" data-slug="latin-vol3c-ambiguity">Vol. III.c: Where the Endings Blur</a><button class="read-mark" type="button" data-slug="latin-vol3c-ambiguity" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol4-verbs.html" data-slug="latin-vol4-verbs">Vol. IV: The Verb Engine</a><button class="read-mark" type="button" data-slug="latin-vol4-verbs" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol4a-complementary-infinitives.html" data-slug="latin-vol4a-complementary-infinitives">Vol. IV.a: Verbs That Lean on Verbs</a><button class="read-mark" type="button" data-slug="latin-vol4a-complementary-infinitives" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol4b-word-hoard.html" data-slug="latin-vol4b-word-hoard">Vol. IV.b: The Word-Hoard</a><button class="read-mark" type="button" data-slug="latin-vol4b-word-hoard" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol5-stone-latin.html" data-slug="latin-vol5-stone-latin">Vol. V: Stone Latin</a><button class="read-mark" type="button" data-slug="latin-vol5-stone-latin" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol6-curse-tablets.html" data-slug="latin-vol6-curse-tablets">Vol. VI: Whispered Latin</a><button class="read-mark" type="button" data-slug="latin-vol6-curse-tablets" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol6a-charm-craft.html" data-slug="latin-vol6a-charm-craft">Vol. VI.a: Charm-craft</a><button class="read-mark" type="button" data-slug="latin-vol6a-charm-craft" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol7-verb-workshop.html" data-slug="latin-vol7-verb-workshop">Vol. VII: The Verb Workshop</a><button class="read-mark" type="button" data-slug="latin-vol7-verb-workshop" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol7a-druids.html" data-slug="latin-vol7a-druids">Vol. VII.a: The Druids, Through Roman Eyes</a><button class="read-mark" type="button" data-slug="latin-vol7a-druids" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol8-time-machine.html" data-slug="latin-vol8-time-machine">Vol. VIII: The Time Machine</a><button class="read-mark" type="button" data-slug="latin-vol8-time-machine" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol9-reported-world.html" data-slug="latin-vol9-reported-world">Vol. IX: The Reported World</a><button class="read-mark" type="button" data-slug="latin-vol9-reported-world" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-vol10-subjunctive.html" data-slug="latin-vol10-subjunctive">Vol. X: The Unreal</a><button class="read-mark" type="button" data-slug="latin-vol10-subjunctive" aria-label="Toggle read mark"></button></li>
+</ol>
+</section>
+<section class="shelf-section">
+<h2>II · Lectiōnēs</h2>
+<ol class="shelf-list">
+<li><a href="docs/lectio-1-vindolanda.html" data-slug="lectio-1-vindolanda">Lectiōnēs — Lectiō I: A Letter from the Edge of the World</a><button class="read-mark" type="button" data-slug="lectio-1-vindolanda" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/lectio2-ring-of-senicianus.html" data-slug="lectio2-ring-of-senicianus">Lectiō II — The Ring of Senicianus</a><button class="read-mark" type="button" data-slug="lectio2-ring-of-senicianus" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/lectio-aurora.html" data-slug="lectio-aurora">Lectiō — Aurōra: a small book for first light</a><button class="read-mark" type="button" data-slug="lectio-aurora" aria-label="Toggle read mark"></button></li>
+</ol>
+</section>
+<section class="shelf-section">
+<h2>III · Vignettes</h2>
+<ol class="shelf-list">
+<li><a href="docs/creta-chalk-book.html" data-slug="creta-chalk-book">Crēta — a chalk book</a><button class="read-mark" type="button" data-slug="creta-chalk-book" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/familia-britannica-reader.html" data-slug="familia-britannica-reader">Familia Britannica — A Romano-British Reader</a><button class="read-mark" type="button" data-slug="familia-britannica-reader" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/herbarium-downland-week.html" data-slug="herbarium-downland-week">Herbārium — a downland week of worts</a><button class="read-mark" type="button" data-slug="herbarium-downland-week" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/latin-exercitia1-case-forge.html" data-slug="latin-exercitia1-case-forge">Latin Exercitia — I: The Case Forge</a><button class="read-mark" type="button" data-slug="latin-exercitia1-case-forge" aria-label="Toggle read mark"></button></li>
+<li><a href="docs/nox-night-book.html" data-slug="nox-night-book">Nox — a night book</a><button class="read-mark" type="button" data-slug="nox-night-book" aria-label="Toggle read mark"></button></li>
+</ol>
+</section>
+</main>
+<footer class="shelf-footer">
+<a href="drills.html">The Drills</a>
+<span class="dot">·</span>
+<a href="docs/latin-learning-preferences.html">Learning Preferences</a>
+</footer>
+<div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
