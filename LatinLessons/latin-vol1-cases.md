@@ -1,6 +1,6 @@
 # Latin Reference — Vol. I: The Case System
 
-## The six cases
+## The six working cases
 
 | Case | Function | English signal | Example |
 |---|---|---|---|
@@ -13,11 +13,13 @@
 
 Pithy anchors: genitive = *of/'s* · dative = *to/for* · ablative = *by/with/from/in*. Lock those in and half the battle is won.
 
+*Working* cases because there is a seventh, the **locative**, surviving only in scraps — names of towns and small islands, plus a few fossils (*Rōmae*, *domī* at home, *rūrī* in the country). It does one job, on a closed list of words, and everything else that might have used it went to the ablative long before the Latin you'll be reading. Meet it when you meet it; don't drill it.
+
 ## Prepositions and the cases they trigger
 
 Latin prepositions are locked to specific cases — spotting the preposition tells you the case of the next noun.
 
-**Accusative triggers** (broadly: motion toward, through, against)
+**Accusative triggers** (often motion toward, through or against — but the case is a property of each preposition, and several common ones are purely positional)
 
 | Prep | Meaning |
 |---|---|
@@ -29,6 +31,10 @@ Latin prepositions are locked to specific cases — spotting the preposition tel
 | trans | across |
 | circum | around |
 | contrā | against |
+| prope | near, close to |
+| apud | at, among, at the house of |
+
+Note the positional exceptions: *inter*, *circum*, *ante*, *post* and *prope* all take the accusative while describing where something simply *is*. **Ōstia est prope Rōmam** — Ostia isn't going anywhere. The motion gloss explains the pattern's origin, not every member of it: learn the list, and let the in/sub rule below carry the logic.
 
 **Ablative triggers** (broadly: source, separation, accompaniment)
 
@@ -44,6 +50,8 @@ Latin prepositions are locked to specific cases — spotting the preposition tel
 **The in/sub rule:** *in* and *sub* take **accusative for motion** (in urbem — *into the city*) and **ablative for location** (in urbe — *in the city*). It looks irregular but is the most logical thing in the language: accusative marks goals; ablative marks where you already are.
 
 Why ad (acc) but ab (abl) when both involve motion? Accusative marks **goals and targets**; ablative marks **sources and separation**. *Ablative* itself derives from ab + lātum, "carried away from".
+
+> **Aside — near and far.** Textbooks pair **prope Rōmam** with **procul ab Rōmā** — near Rome, far from Rome — and the pair is worth holding onto, because the case difference isn't about distance at all. *Procul* is an adverb; the case-work in that phrase is done by *ab*, a separation word, hence ablative. Nearness takes the accusative because *prope* says so. Its relatives *propior* (nearer) and *proximus* (nearest) reach English as *approach*, *proximity* and *propinquity* — and *approach* is the one place the accusative's target sense still shows through.
 
 ## Declension endings
 
@@ -104,5 +112,6 @@ Third declension nominatives are irregular; the **genitive singular reveals the 
 | Abl | puellā | Cum **puellā** ad templum ambulāmus. | *We walk to the temple with the girl.* |
 | Voc | puella | **Puella**, venī hūc! | *Girl, come here!* |
 | Acc (motion) | puellam | Ad **puellam** currit. | *He runs towards the girl.* |
+| Acc (position) | puellam | Prope **puellam** stat. | *He stands near the girl.* |
 
-This is the table to drill: reading one noun shift through seven contexts is what makes the pattern click.
+This is the table to drill: reading one noun shift through seven contexts is what makes the pattern click — and the last two rows are the point of this volume in miniature, the same ending doing motion and position depending only on which preposition is standing in front of it.
