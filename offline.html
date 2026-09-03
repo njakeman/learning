@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Offline · Tabella</title>
+<style>
+:root { --bg: #f5eeda; --text: #3a2f22; --soft: #7a6a52; --accent: #8c2f1b; --rule: #d8cdb4; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #242a31; --text: #e9e1cb; --soft: #b3aa93; --accent: #c2a15a; --rule: #454d56; }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+  padding: 5rem 1.5rem;
+  line-height: 1.7;
+}
+h1 { font-weight: 600; font-size: 2rem; letter-spacing: 0.28em; text-indent: 0.28em; }
+.seam { color: var(--soft); font-size: 0.65rem; letter-spacing: 0.9em; text-indent: 0.9em; margin: 1.4rem 0 2.4rem; }
+p { max-width: 34rem; margin: 0 auto 1rem; color: var(--soft); }
+button {
+  font: inherit;
+  margin-top: 1rem;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.35rem 1.3rem;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>TABELLA</h1>
+<div class="seam" aria-hidden="true">◆ ◆ ◆ ◆ ◆</div>
+<p>You're offline, and this page isn't in the library's cache — iOS may have cleared it after long disuse.</p>
+<p>Reconnect to the internet, then reopen Tabella; the whole library will be fetched afresh and reading can carry on without signal.</p>
+<button type="button" onclick="location.reload()">Try again</button>
+</body>
+</html>
